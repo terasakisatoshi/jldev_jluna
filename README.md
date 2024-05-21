@@ -11,6 +11,11 @@ Hello World project using jluna on Docker container
 Here, we provide a shell script named `run_docker.sh` to build a docker image and create a container from the image. Do you wanna try? Just run:
 
 ```console
+$ cat run_docker.sh
+docker build -t jldev_jluna .
+docker run --rm -it \
+	-v $PWD:/workspaces -w /workspaces \
+	jldev_jluna /bin/bash -c "cmake -S . -B ./build && cmake --build ./build && ./build/main"
 $ bash run_docker.sh
 ```
 
@@ -45,6 +50,8 @@ What's Next?
 [JULIA][LOG] initialization successful (1 thread(s)).
 hello julia
 ```
+
+
 
 ## Related topics
 
