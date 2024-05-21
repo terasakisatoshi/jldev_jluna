@@ -1,5 +1,7 @@
 # jldev_jluna
 
+[![Docker Image CI](https://github.com/terasakisatoshi/jldev_jluna/actions/workflows/docker-image.yml/badge.svg)](https://github.com/terasakisatoshi/jldev_jluna/actions/workflows/docker-image.yml)
+
 Hello World project using jluna on Docker container
 
 ## Setup
