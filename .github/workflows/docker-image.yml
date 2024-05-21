@@ -16,10 +16,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build -t jldev_jluna
-    - name: Run the Docker container
-      run: |
-        docker run --rm -t jldev_jluna \
-          -v $PWD:/workspaces -w /workspaces \
-          jldev_jluna /bin/bash -c "cmake -S . -B ./build && cmake --build ./build && ./build/main"
+    - name: Build and Run
+      run: bash run_docker.sh
